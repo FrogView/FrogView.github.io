@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[2020,你在家办公了吗？]]></title>
+    <url>%2Fblog%2F2020%2F02%2F12%2F2020%EF%BC%8C%E4%BD%A0%E5%9C%A8%E5%AE%B6%E5%8A%9E%E5%85%AC%E4%BA%86%E5%90%97%EF%BC%9F%2F</url>
+    <content type="text"><![CDATA[2020年，一场灾难降临到了武汉，这个九省通衢的中国城市，新型冠状病毒2019-nCoV，这个由于人类食用野生动物从而导致病毒传播的罪恶之源，正在疯狂的在全国范围传播。 出于疫情防控的需要，全国各个城市都实现了一系列杜绝人员流动和聚集的措施，春节之后，疫情还在不断的传染，各项封城封村的措施也更加严厉，各个企业都不能像往年一样如期开工，这个时候，好多互联网企业就选择了在家办公这一方式。 对于我来说，在家办公是非常棒的一项措施，由于我的工作并不是很忙，以往在公司办公的时候，由于公司的保密需要，工作电脑上只能装特定的软件，因此，当你空闲的时候，什么都做不了，在家办公就不一样了，你可以做任何你想做的事，只需要保证工作按时完成，不影响正常的工作交流就行。而且平时在公司的时候都是买饭吃，在家办公就可以每天自己做饭，自己想吃什么就吃什么，干净又实惠。在家的时候对穿衣打扮更是可以将就，不需要再每天洗头化妆穿衣打扮，只需要一套睡衣就足以。 在家办公也是有一些不方便的地方，首先是不能集中注意力，家人的打扰和其他事情的影响可能会导致工作效率变得较低，其次，沟通成本变的很高，很多事情可能当面很快就解决了，远程往往变得很麻烦甚至无法解决。 最后，对于我们国家而言，远程工作还有很长的路要做，希望这次的病毒能很快的过去，也希望人类能从中吸取教训，以后更应该保护大自然，不要乱吃乱杀野生动物，毕竟善待大自然就是善待人类自己。]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>办公 病毒</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C#本质论 技术摘要]]></title>
+    <url>%2Fblog%2F2019%2F07%2F08%2FC-%E6%9C%AC%E8%B4%A8%E8%AE%BA-%E6%8A%80%E6%9C%AF%E6%91%98%E8%A6%81%2F</url>
+    <content type="text"><![CDATA[C# 概述 数据类型 操作符和控制流 方法和参数 类 继承 接口 值类型 良构类型 异常处理 泛型]]></content>
+      <categories>
+        <category>技术专栏</category>
+      </categories>
+      <tags>
+        <tag>.NET</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C# 重载和重写的区别和示例]]></title>
+    <url>%2Fblog%2F2019%2F07%2F08%2FC-%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E7%A4%BA%E4%BE%8B%2F</url>
+    <content type="text"><![CDATA[结论： 基类对象去调用重载方法时，会按照继承关系依次往下查找，如果要调用重写方法，则调用对象必须为重写方法本身所属对象函数应用123456789101112131415161718192021222324252627282930static void Main(string[] args)&#123; BaseClass baseClass = new BaseClass(); //基本函数 baseClass.Function(); //基本重载函数 baseClass = new OverrideClass(); baseClass.Function(); OverrideClass overrideClass = new OverrideClass(); overrideClass.Function(); //基本重写函数 baseClass = new OverloadClass(); baseClass.Function(); OverloadClass overloadClass = new OverloadClass(); overloadClass.Function(); //重载和重写混合时 baseClass = new OverloadExClass(); baseClass.Function(); OverrideClass or = new OverloadExClass(); or.Function(); OverloadExClass overloadExClass = new OverloadExClass(); overloadExClass.Function(); or = overloadExClass; or.Function(); ReadLine();&#125; 类定义123456789101112131415161718192021222324252627282930313233343536//类定义namespace EssentialCSharp&#123; public class BaseClass &#123; public virtual void Function() &#123; Console.WriteLine(&quot;base&quot;); &#125; &#125; public class OverrideClass : BaseClass &#123; public override void Function() &#123; Console.WriteLine(&quot;override&quot;); &#125; &#125; public class OverloadClass : BaseClass &#123; public new void Function() &#123; Console.WriteLine(&quot;overload&quot;); &#125; &#125; public class OverloadExClass : OverrideClass &#123; public new void Function() &#123; Console.WriteLine(&quot;OverloadEx&quot;); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>技术专栏</category>
+      </categories>
+      <tags>
+        <tag>.NET</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Glass 完美解决当AllowTransparency =True时，wpf WindowsFormsHost不可见的问题]]></title>
+    <url>%2Fblog%2F2019%2F06%2F17%2FGlass-%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3%E5%BD%93AllowTransparency-True%E6%97%B6%EF%BC%8Cwpf-WindowsFormsHost%E4%B8%8D%E5%8F%AF%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[详细说明 DwmEnableComposition 启用DWM 1.dwmapi.dll (dwmapi.dll 文件是 Microsoft Desktop Window Manager API（桌面窗口管理器DWM 的公用界面）的动态链接库，属于正常文件，主要用作桌面效果（如 Aero 效果）的API。DWM 是一种新界面，在除 Windows Vista Home Basic 和 Windows 7 Home Basic 之外的 Windows Vista 和 Windows 7 版本中均提供 DWM 界面) 1234567891011121314151617181920212223242526272829303132333435public class GlassHelper &#123; public static bool ExtendGlassFrame(Window window, Thickness margin) &#123; if (!DwmIsCompositionEnabled()) return false; IntPtr hwnd = new WindowInteropHelper(window).Handle; if (hwnd == IntPtr.Zero) throw new InvalidOperationException(&quot;The Window must be shown before extending glass.&quot;); // Set the background to transparent from both the WPF and Win32 perspectives window.Background = Brushes.Transparent; HwndSource.FromHwnd(hwnd).CompositionTarget.BackgroundColor = Colors.Transparent; MARGINS margins = new MARGINS(margin); DwmExtendFrameIntoClientArea(hwnd, ref margins); return true; &#125; struct MARGINS &#123; public MARGINS(Thickness t) &#123; Left = (int)t.Left; Right = (int)t.Right; Top = (int)t.Top; Bottom = (int)t.Bottom; &#125; public int Left; public int Right; public int Top; public int Bottom; &#125; [DllImport(&quot;dwmapi.dll&quot;, PreserveSig = false)] static extern void DwmExtendFrameIntoClientArea(IntPtr hwnd, ref MARGINS margins); [DllImport(&quot;dwmapi.dll&quot;, PreserveSig = false)] static extern bool DwmIsCompositionEnabled();&#125; 2.MainWindow.xaml 1234567891011121314151617&lt;Window x:Class="WpfApplication1.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="White" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Title="MainWindow" &gt; &lt;Grid Width="800" Height="550"&gt; &lt;Border&gt; &lt;Border.Background&gt; &lt;ImageBrush ImageSource="&#123;Binding MinBackground&#125;" Stretch="Fill"/&gt; &lt;/Border.Background&gt; &lt;/Border&gt; &lt;Grid Margin="28,10,28,45" Background="Red"&gt; &lt;Border HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Background="Black" PreviewMouseLeftButtonDown="Border_PreviewMouseLeftButtonDown"/&gt; &lt;Button Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Click="CloseBtn_Click" Width="75" Height="25"/&gt; &lt;/Grid&gt; &lt;/Grid&gt;&lt;/Window&gt; 3.MainWindow.cs 12345678protected override void OnSourceInitialized(EventArgs e) &#123; base.OnSourceInitialized(e); // This can&apos;t be done any earlier than the SourceInitialized event: //-1表示将整个窗体设置为透明 GlassHelper.ExtendGlassFrame(this, new Thickness(-1)); &#125;]]></content>
+      <categories>
+        <category>技术专栏</category>
+      </categories>
+      <tags>
+        <tag>.NET</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[How to download a single folder,directory or partial repo from a github repo]]></title>
+    <url>%2Fblog%2F2019%2F06%2F17%2FHow-to-download-a-single-folder-directory-or-partial-repo-from-a-github-repo%2F</url>
+    <content type="text"><![CDATA[download-single-folder GitZip (Credits to Kino – upvote his answer right here!)DownGit (Credits to Minhas Kamal – upvote his answer right here!)]]></content>
+      <categories>
+        <category>技术专栏</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[杀死一只知更鸟（读后感）]]></title>
+    <url>%2Fblog%2F2019%2F05%2F28%2F%E6%9D%80%E6%AD%BB%E4%B8%80%E5%8F%AA%E7%9F%A5%E6%9B%B4%E9%B8%9F%EF%BC%88%E8%AF%BB%E5%90%8E%E6%84%9F%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[“知更鸟只是哼唱美妙的音乐供人们欣赏，什么坏事也不做。它们不吃人家院子里种的花果蔬菜，也不在谷仓里筑巢做窝，只是为我们尽情地唱歌。所以说杀死一只知更鸟是犯罪。 什么是罪恶，什么是善良，什么是正义，当我们面对罪恶时应该怎么坚持自己的内心。本书通过一个小女孩的视角，讲述了兄妹在生活中碰到的许许多多的事情，和他们与父亲的沟通，不断成长的故事。 文章最令人难忘的两点： 1.父亲对自己子女的教导方式和自身信念的坚持，在孩子的成长过程中，总会遇到各种各样的人和事物，总会有各种问题的产生，父母如何教导孩子去对待不同的事情，面对孩子的问题，应该如何去解答，如何做才能起到一个榜样作用，都是为人父母应该思考的问题，书中的父母在和自己的孩子相处中坚持了自己的信念和方式，使人一次次的为他的思想而折服，值得我们去学习。 2.书中还讲到了关于种族歧视的问题，这是一个永恒的话题，关于公平和正义永远存在于我们生活之中，书中的黑人并没有犯法，但是仅仅因为他是黑人，就要承受莫须有的冤屈，虽然镇上的每一位人都知道事情的真相，但却只有极少数人敢于公开去维护公平和正义，有些事情还是值得我们去思考的。 无论做什么事情，我们都应该坚持内心的想法，有些事情，只有做了才会有所进步，才能体现出他的意义，善良的去对待朋友，面对恶人也能够维护正义，坚持正确的事，做一个孩子心中的好榜样。]]></content>
+      <categories>
+        <category>读书感悟</category>
+      </categories>
+      <tags>
+        <tag>书评</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2Fblog%2F2019%2F05%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>技术专栏</category>
+      </categories>
+  </entry>
+</search>
